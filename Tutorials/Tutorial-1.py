@@ -6,7 +6,7 @@ import os
 
 img = cv.imread('./Tutorials/python.jpg') # where 0 tells to read in grayscale
 
-cv.namedWindow('image', cv.WINDOW_NORMAL)
+cv.namedWindow('image', cv.WINDOW_NORMAL) # cv.WINDOW_NORMAL consente di creare una finestra ridimensionabile
 cv.imshow('image', img)
 cv.waitKey(0)
 cv.destroyAllWindows()

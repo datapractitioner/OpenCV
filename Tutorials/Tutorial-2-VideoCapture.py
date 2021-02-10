@@ -1,13 +1,13 @@
 import cv2 as cv
 import numpy as np
 
-cap = cv.VideoCapture(0)
+cap = cv.VideoCapture(0) # istanzia l'oggetto VideoCapture
 
 while(True):
 
-    ret, frame = cap.read()
+    _, frame = cap.read() # lettura input dalla videocamera
 
-    gray = cv.cvtColor(frame, cv.COLOR_BGR2HSV)
+    gray = cv.cvtColor(frame, cv.COLOR_BGR2HSV) # conversione frame in altra scala colore
 
     cv.imshow('frame', gray)
     if cv.waitKey(1) & 0xFF == ord('q'):
